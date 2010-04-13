@@ -30,6 +30,15 @@
 	
 	
 }
+-(void)showDetailView:(id)sender
+{
+	buttonDetailViewController *detailController = [[buttonDetailViewController alloc] initWithNibName:@"detailView" bundle:nil];
+	[self.editViewController.view removeFromSuperview];
+	[self.view insertSubview:detailController.view atIndex:0];
+	[detailController release];
+	
+	
+}
 -(void)showEditView:(id)sender
 {
 	buttonEditViewController *editController = [[buttonEditViewController alloc] init];
