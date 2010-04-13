@@ -18,4 +18,5 @@
 @property (nonatomic, retain) buttonEditViewController *editViewController;
 @property (nonatomic, retain) buttonDetailViewController *detailViewController;
 -(IBAction)switchEdit:(id)sender;
+-(IBAction)showEditView:(id)sender;
 @end

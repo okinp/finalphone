@@ -11,6 +11,8 @@
 
 @interface buttonEditViewController : UIViewController {
 
+	
 }
+-(IBAction)editViewPressed:(id)sender;
 
 @end

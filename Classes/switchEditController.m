@@ -15,13 +15,13 @@
 @synthesize detailViewController;
 
 -(void)viewDidLoad
-{/*
+{
 	buttonEditViewController *editController = [[buttonEditViewController alloc] initWithNibName:@"editView" bundle:nil];
 	self.editViewController = editController;
 	[self.view insertSubview:editController.view atIndex:0];
 	[editController release];
 	[super viewDidLoad];
-  */
+  
 }
 -(void)switchEdit:(id)sender
 {
@@ -29,6 +29,12 @@
 	
 	
 	
+}
+-(void)showEditView:(id)sender
+{
+	buttonEditViewController *editController = [[buttonEditViewController alloc] init];
+	[editController editViewPressed:sender];
+	[editController release];
 	
 }
 - (void)didReceiveMemoryWarning {

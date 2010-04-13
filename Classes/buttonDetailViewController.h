@@ -12,5 +12,5 @@
 @interface buttonDetailViewController : UIViewController {
 
 }
-
+-(IBAction)detailViewPressed;
 @end
