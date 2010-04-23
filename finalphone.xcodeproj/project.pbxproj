@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17C56B4D1173DB5700A14AFC /* buttonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C56B4C1173DB5700A14AFC /* buttonDetailViewController.m */; };
-		17C56B521173DB7C00A14AFC /* buttonEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C56B511173DB7C00A14AFC /* buttonEditViewController.m */; };
+		17C56B4D1173DB5700A14AFC /* EditButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C56B4C1173DB5700A14AFC /* EditButtonViewController.m */; };
+		17C56B521173DB7C00A14AFC /* ListButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C56B511173DB7C00A14AFC /* ListButtonViewController.m */; };
 		17C56B561173DC0200A14AFC /* editView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C56B551173DC0200A14AFC /* editView.xib */; };
-		17C56B5A1173DC0F00A14AFC /* detailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C56B591173DC0F00A14AFC /* detailView.xib */; };
-		17C56B5F1173DC8F00A14AFC /* switchEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C56B5E1173DC8F00A14AFC /* switchEditController.m */; };
+		17C56B5A1173DC0F00A14AFC /* listView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C56B591173DC0F00A14AFC /* listView.xib */; };
+		17C56B5F1173DC8F00A14AFC /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C56B5E1173DC8F00A14AFC /* ButtonController.m */; };
+		17DCB8431181B7FC0030B124 /* customButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DCB8421181B7FC0030B124 /* customButton.m */; };
 		1D3623260D0F684500981E51 /* finalphoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* finalphoneAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -21,14 +22,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		17C56B4B1173DB5700A14AFC /* buttonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonDetailViewController.h; sourceTree = "<group>"; };
-		17C56B4C1173DB5700A14AFC /* buttonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonDetailViewController.m; sourceTree = "<group>"; };
-		17C56B501173DB7C00A14AFC /* buttonEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonEditViewController.h; sourceTree = "<group>"; };
-		17C56B511173DB7C00A14AFC /* buttonEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonEditViewController.m; sourceTree = "<group>"; };
+		17C56B4B1173DB5700A14AFC /* EditButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditButtonViewController.h; sourceTree = "<group>"; };
+		17C56B4C1173DB5700A14AFC /* EditButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditButtonViewController.m; sourceTree = "<group>"; };
+		17C56B501173DB7C00A14AFC /* ListButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListButtonViewController.h; sourceTree = "<group>"; };
+		17C56B511173DB7C00A14AFC /* ListButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListButtonViewController.m; sourceTree = "<group>"; };
 		17C56B551173DC0200A14AFC /* editView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = editView.xib; sourceTree = "<group>"; };
-		17C56B591173DC0F00A14AFC /* detailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = detailView.xib; sourceTree = "<group>"; };
-		17C56B5D1173DC8F00A14AFC /* switchEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = switchEditController.h; sourceTree = "<group>"; };
-		17C56B5E1173DC8F00A14AFC /* switchEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = switchEditController.m; sourceTree = "<group>"; };
+		17C56B591173DC0F00A14AFC /* listView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = listView.xib; sourceTree = "<group>"; };
+		17C56B5D1173DC8F00A14AFC /* ButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonController.h; sourceTree = "<group>"; };
+		17C56B5E1173DC8F00A14AFC /* ButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
+		17DCB8411181B7FC0030B124 /* customButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customButton.h; sourceTree = "<group>"; };
+		17DCB8421181B7FC0030B124 /* customButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customButton.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* finalphoneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finalphoneAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* finalphoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = finalphoneAppDelegate.m; sourceTree = "<group>"; };
@@ -58,14 +61,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				17C56B5D1173DC8F00A14AFC /* switchEditController.h */,
-				17C56B5E1173DC8F00A14AFC /* switchEditController.m */,
-				17C56B501173DB7C00A14AFC /* buttonEditViewController.h */,
-				17C56B511173DB7C00A14AFC /* buttonEditViewController.m */,
 				1D3623240D0F684500981E51 /* finalphoneAppDelegate.h */,
 				1D3623250D0F684500981E51 /* finalphoneAppDelegate.m */,
-				17C56B4B1173DB5700A14AFC /* buttonDetailViewController.h */,
-				17C56B4C1173DB5700A14AFC /* buttonDetailViewController.m */,
+				17DCB8411181B7FC0030B124 /* customButton.h */,
+				17DCB8421181B7FC0030B124 /* customButton.m */,
+				17C56B5D1173DC8F00A14AFC /* ButtonController.h */,
+				17C56B5E1173DC8F00A14AFC /* ButtonController.m */,
+				17C56B501173DB7C00A14AFC /* ListButtonViewController.h */,
+				17C56B511173DB7C00A14AFC /* ListButtonViewController.m */,
+				17C56B4B1173DB5700A14AFC /* EditButtonViewController.h */,
+				17C56B4C1173DB5700A14AFC /* EditButtonViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -105,7 +110,7 @@
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* finalphone-Info.plist */,
 				17C56B551173DC0200A14AFC /* editView.xib */,
-				17C56B591173DC0F00A14AFC /* detailView.xib */,
+				17C56B591173DC0F00A14AFC /* listView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -164,7 +169,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				17C56B561173DC0200A14AFC /* editView.xib in Resources */,
-				17C56B5A1173DC0F00A14AFC /* detailView.xib in Resources */,
+				17C56B5A1173DC0F00A14AFC /* listView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,9 +182,10 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* finalphoneAppDelegate.m in Sources */,
-				17C56B4D1173DB5700A14AFC /* buttonDetailViewController.m in Sources */,
-				17C56B521173DB7C00A14AFC /* buttonEditViewController.m in Sources */,
-				17C56B5F1173DC8F00A14AFC /* switchEditController.m in Sources */,
+				17C56B4D1173DB5700A14AFC /* EditButtonViewController.m in Sources */,
+				17C56B521173DB7C00A14AFC /* ListButtonViewController.m in Sources */,
+				17C56B5F1173DC8F00A14AFC /* ButtonController.m in Sources */,
+				17DCB8431181B7FC0030B124 /* customButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

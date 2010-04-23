@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class switchEditController;
+@class ButtonController;
 @interface finalphoneAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	switchEditController *switchViewer;
+	ButtonController *buttonViewer;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet switchEditController *switchViewer;
+@property (nonatomic, retain) IBOutlet ButtonController *buttonViewer;
 @end
 

@@ -3,7 +3,7 @@
 *~.nib
 
 build/
-
+*.app
 *.pbxuser
 *.perspective
 *.perspectivev3
