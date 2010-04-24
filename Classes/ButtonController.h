@@ -21,6 +21,7 @@
 @property (nonatomic, retain) EditButtonViewController *editButtonViewController;
 @property (nonatomic, retain) ListButtonViewController *listButtonViewController;
 @property (nonatomic, retain) UIToolbar *toolbar;
+@property (nonatomic, retain) NSMutableArray *buttons;
 -(IBAction)newButton:(id)sender;
 -(IBAction)editButton:(id)sender;
 -(IBAction)doneButton:(id)sender;

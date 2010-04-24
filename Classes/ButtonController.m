@@ -15,6 +15,7 @@
 @synthesize	listButtonViewController;
 @synthesize editButtonViewController;
 @synthesize toolbar;
+@synthesize buttons;
 -(void)setupListView
 {
 	//Add buttons
@@ -51,6 +52,14 @@
 	[self.view addSubview:toolbar];
 	ListButtonViewController *listController = [[ListButtonViewController alloc] initWithNibName:@"listView" bundle:nil];
 	self.listButtonViewController = listController;
+	
+	
+	//Add buttons to view
+	for (int i=0; i<[buttons count]; i++) {
+		UIButton *button = [[buttons objectAtIndex:(NSUInteger) i] getButton] ;
+		button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+		[listController.view addSubview:button];
+	}
 	[self.view insertSubview:listController.view atIndex:0];
 	[toolbar release];
 	[listController release];
@@ -97,7 +106,7 @@
 	
 }
 -(void)viewDidLoad
-{
+{	self.buttons=[[NSMutableArray alloc] init];
 	[self setupListView];
 	[super viewDidLoad];
   
@@ -128,14 +137,15 @@
 
 -(void)doneButton:(id)sender
 {
-	//there are two cases here
-	// In one case we are adding a  new button and on the other we are editing an existing one
+	//There are two cases here
+	//In one case we are adding a  new button and on the other we are editing an existing one
+	//1st Case: New
+	
+
 	NSString *text = [[NSString alloc] init];
 	text=[[self.editButtonViewController secondTextField] text];
-	NSLog(@"%S",text);
+	NSLog(@"%@",text);
 	customButton *cBtn= [[customButton alloc] init];
-	
-	
 	UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[btn addTarget:self 
 			   action:@selector(deleteButton:)
@@ -147,11 +157,7 @@
 	[btn setTitle:[[editButtonViewController firstTextField] text] forState:UIControlStateNormal];
 	//Set position
 	[cBtn assignButton:btn];
-	
 	[buttons addObject:cBtn];
-	
-	
-	
 	NSLog(@"%d",[buttons count]);
 	
 	[editButtonViewController.view removeFromSuperview];
