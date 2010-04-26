@@ -59,6 +59,7 @@
 	self.editView=editB;
 	[super viewDidLoad];
 	[editB release];
+	enable=YES;
 	
 	
 }
@@ -76,6 +77,22 @@
 -(IBAction)newButton:(id)sender{
 	[self switchViews];
 	[self displayEditToolbar];
+	
+	
+	
+}
+
+-(IBAction)editButton:(id)sender{
+	for (int i=0; i<[[self.listView buttons] count];i++){
+		BOOL en=[[[self.listView buttons] objectAtIndex:i] button].enabled;
+		[[[[self.listView buttons] objectAtIndex:i] button] setEnabled:!en];
+	
+		
+	}
+	
+	[self.listView viewDidLoad];
+	
+	
 	
 	
 	
@@ -114,6 +131,9 @@
 	UIBarButtonItem *newButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 																			   target:self
 																			   action:@selector(newButton:)];
+	UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+																			   target:self
+																			   action:@selector(editButton:)];
 	
 	UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
 																				  target:self
@@ -126,10 +146,11 @@
 																			  action:nil];
 	
 	
-	NSArray *items = [NSArray arrayWithObjects: newButton, flexItem, deleteButton, nil];
+	NSArray *items = [NSArray arrayWithObjects: newButton, flexItem,deleteButton, editButton, nil];
 	
 	//release buttons
 	[newButton release];
+	[editButton release];
 	[deleteButton release];
 	[flexItem release];
 	

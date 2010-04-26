@@ -33,7 +33,7 @@
         [btn setTitle:[self.button currentTitle] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         //btn.center = self.center;
-		[btn setEnabled:NO];
+		[btn setEnabled:YES];
 		[self setButton:btn];
         [self addSubview:button];
 		
