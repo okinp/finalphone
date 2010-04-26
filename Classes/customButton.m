@@ -13,27 +13,22 @@
 @synthesize title;
 @synthesize userInteractionEnabled;
 
+
+/*
 -(void)drawRect:(CGRect)frame{
 	
 	
 	NSLog(@"Draw Rect Called");	
 	
 }
+ */
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
 		[self setUserInteractionEnabled:YES];
 		self.frame=frame;
+		self.bounds=frame;
         UIButton *btn = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-        //CGPoint o =frame.origin;
-		//CGSize sz =frame.size;
-		//int x=o.x;
-		//int y=o.y;
-		//int wd=sz.width;
-		//int ht=sz.height;
-		//CGRect rec= CGRectMake(x-10, y-30, wd, ht);
 		btn.frame = frame;
-        //btn.frame=rec;
-		//btn.backgroundColor = [UIColor clearColor];
         [btn setTitle:[self.button currentTitle] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         btn.center = self.center;
@@ -56,5 +51,50 @@
 	NSString *txt =self.shortcut;
 	NSLog(@"%@",txt);	
 }
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	// We only support single touches, so anyObject retrieves just that touch from touches
+	//UITouch *touch = [touches anyObject];
+	
+	/*
+	// Only move the placard view if the touch was in the placard view
+	if ([touch view] != button) {
+		// In case of a double tap outside the placard view, update the placard's display string
+		if ([touch tapCount] == 2) {
+			[placardView setupNextDisplayString];
+		}
+		return;
+	}
+	// Animate the first touch
+	CGPoint touchPoint = [touch locationInView:self];
+	[self animateFirstTouchAtPoint:touchPoint];
+	 */
+}
 
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	UITouch *touch = [touches anyObject];
+	
+	// If the touch was in the placardView, move the placardView to its location
+	if ([touch view] == button) {
+		CGPoint location = [touch locationInView:self];
+		button.center = location;		
+		return;
+	}
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	UITouch *touch = [touches anyObject];
+	
+	// If the touch was in the placardView, bounce it back to the center
+	if ([touch view] == button) {
+		// Disable user interaction so subsequent touches don't interfere with animation
+		self.userInteractionEnabled = NO;
+		//[self animatePlacardViewToCenter];
+		return;
+	}		
+}
 @end
