@@ -99,7 +99,7 @@
 	customButton *btn = [[customButton alloc] initWithFrame:rect];
 	NSString *theShortcut= [[editView secondTextField] text];
 	NSString *theTitle =[[editView firstTextField] text];
-	[btn assignTitle:theTitle withShortcut:theShortcut];
+	[btn assignTitle:theTitle andShortcut:theShortcut];
 	[listView.buttons addObject:btn];
 	[self switchViews];
 	[self displayListToolbar];
