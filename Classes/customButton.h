@@ -13,9 +13,12 @@
 @interface customButton : UIView {
 	UIButton *button;
 	NSString *shortcut;
+	BOOL userInteractionEnabled;
 }
--(NSString*)getShortcut;
--(void)assignShortcut:(NSString *)string;
--(UIButton*)getButton;
--(void)assignButton:(UIButton *)btn;
+@property (retain, nonatomic) UIButton *button;
+@property (retain, nonatomic) NSString *shortcut;
+@property(nonatomic, getter=isUserInteractionEnabled) BOOL userInteractionEnabled;
+-(void)assignTitle:(NSString *)title withShortcut:(NSString *)srtcut;
+-(IBAction)buttonClick:(id)sender;
+
 @end

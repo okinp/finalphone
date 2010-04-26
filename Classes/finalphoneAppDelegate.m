@@ -7,26 +7,27 @@
 //
 
 #import "finalphoneAppDelegate.h"
-#import "ButtonController.h"
+#import "switchViewController.h"
 @implementation finalphoneAppDelegate
-
 @synthesize window;
-@synthesize buttonViewer;
+@synthesize switcher;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     // Override point for customization after application launch
-	
-	[window addSubview:buttonViewer.view];
+	 
+	//[application setStatusBarHidden:YES animated:NO];
+	switchViewController * switchView = [[switchViewController alloc] init];
+	[self setSwitcher:switchView];
+	[window addSubview:switcher.view];
     [window makeKeyAndVisible];
-	
 	return YES;
 }
 
 
 - (void)dealloc {
     [window release];
-	[buttonViewer release];
+	[switcher release];
     [super dealloc];
 }
 

@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class customButton;
 
 @interface ListButtonViewController : UIViewController <UITextFieldDelegate> {
-
+	NSMutableArray *buttons;
 	
 }
--(IBAction)editViewPressed:(id)sender;
-
+@property (nonatomic,retain) NSMutableArray *buttons;
+-(void)trialMethod:(id)sender;
 
 @end
