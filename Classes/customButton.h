@@ -14,12 +14,12 @@
 	UIButton *button;
 	NSString *shortcut;
 	NSString *title;
-	BOOL userInteractionEnabled;
+	//BOOL userInteractionEnabled;
 }
 @property (retain, nonatomic) UIButton *button;
 @property (retain, nonatomic) NSString *shortcut;
 @property (retain,nonatomic) NSString *title;
-@property(nonatomic, getter=isUserInteractionEnabled) BOOL userInteractionEnabled;
+//@property(nonatomic, getter=isUserInteractionEnabled) BOOL userInteractionEnabled;
 -(void)assignTitle:(NSString *)ttl andShortcut:(NSString *)srtcut;
 -(IBAction)buttonClick:(id)sender;
 
